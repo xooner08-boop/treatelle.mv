@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatelle.mv</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif;}
+    body {background: #fff8f5; color: #333; line-height: 1.6;}
+    
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgba(247, 197, 213, 0.8);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .btn:hover {background: rgba(241, 148, 181, 0.9);}
+    
+    /* Instagram Styled Button */
+    .ig-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: #ffffff;
+      color: #333;
+      font-family: inherit;
+      transition: 0.3s;
+    }
+    .ig-button svg { display: block; }
+    .ig-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    /* Sections with full background images */
+    header, section {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    
+    /* Overlay for wallpaper effect */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
+
+    /* Hero Section */
+    header {height: 100vh; display: flex; justify-content: center; align-items: center;}
+    header .hero {position: relative; z-index: 1;}
+    header h1 {font-size: 3em; margin-bottom: 10px; text-shadow: 1px 1px 8px rgba(0,0,0,0.5);}
+    header p {font-size: 1.5em; margin-bottom: 20px; text-shadow: 1px 1px 8px rgba(0,0,0,0.5);}
+
+    /* Section Titles & Text */
+    section h2 {font-size: 2.5em; margin-bottom: 20px; text-shadow: 1px 1px 8px rgba(0,0,0,0.5);}
+    section p {max-width: 700px; margin: 0 auto 40px; font-size: 1.2em; text-shadow: 1px 1px 8px rgba(0,0,0,0.5);}
+    
+    /* Order Form Styles */
+    #order {background: #fff8f5; color: #333; text-align: left; padding: 50px 20px;}
+    #order h2 {color: #333; text-align: center; margin-bottom: 30px;}
+    #order form {max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;}
+    #order label {font-weight: bold;}
+    #order input, #order select, #order textarea {
+      padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em;
+    }
+    
+    footer {padding: 20px; background: rgba(247, 197, 213, 0.9); color: #fff; text-align: center;}
+    
+    @media(max-width:768px){
+      header h1 {font-size: 2.2em;}
+      header p {font-size: 1.2em;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header style="background-image: url('images/hero.jpg');">
+    <div class="overlay"></div>
+    <div class="hero">
+      <h1>Welcome to Treatelle.mv</h1>
+      <p>Custom Bouquets, Gift Boxes & Sweet Treats</p>
+      <a href="#order" class="btn">Place Your Order</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" style="background-image: url('images/about.jpg');">
+    <div class="overlay"></div>
+    <h2>About Us</h2>
+    <p>At Treatelle.mv, we craft beautiful custom bouquets, gift boxes for any occasion, and delicious sweet treats including cheesecake, waffles, cookies, donuts, and churros. We make every order special, just for you!</p>
+    <a href="#order" class="btn">Place Your Order</a>
+  </section>
+
+  <!-- Bouquets Section -->
+  <section id="bouquets" style="background-image: url('images/bouquets.jpg');">
+    <div class="overlay"></div>
+    <h2>Custom Bouquets</h2>
+    <p>Beautifully arranged flowers, tailored for any occasion. Choose your flowers, decorations, and packaging to create your perfect bouquet.</p>
+    <a href="#order" class="btn">Place Your Order</a>
+  </section>
+
+  <!-- Sweet Treats Section -->
+  <section id="sweets" style="background-image: url('images/sweets.jpg');">
+    <div class="overlay"></div>
+    <h2>Sweet Treats</h2>
+    <p>Our desserts are freshly made and beautifully presented. Choose your favorites and customize toppings to make them extra special!</p>
+    <a href="#order" class="btn">Place Your Order</a>
+  </section>
+
+  <!-- Gift Boxes Section -->
+  <section id="gifts" style="background-image: url('images/gifts.jpg');">
+    <div class="overlay"></div>
+    <h2>Gift Boxes</h2>
+    <p>Our gift boxes are perfect for any occasion. You can customize them with flowers, sweets, or special items to create a unique gift for your loved ones.</p>
+    <a href="#order" class="btn">Place Your Order</a>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" style="background-image: url('images/contact.jpg'); position: relative;">
+  <div class="overlay"></div>
+
+  <div style="position: relative; z-index: 1;">
+    <h2>Contact Us</h2>
+    <p style="margin-bottom:25px; font-size:1.2em;">Click below to open Treatelle.mv on Instagram</p>
+
+    <!-- Instagram Styled Button (fully visible now) -->
+    <a class="ig-button" 
+       href="https://www.instagram.com/treatelle.mv/" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="position: relative; z-index: 2;">
+       
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zM18 7.2a1.1 1.1 0 1 0-1.1-1.1A1.1 1.1 0 0 0 18 7.2z"/>
+      </svg>
+
+      <span style="font-size:1.1em;">Open Instagram</span>
+    </a>
+  </div>
+</section>
+
+  <!-- Order Form Section -->
+<section id="order">
+  <h2>Place Your Order</h2>
+  <p style="text-align:center; font-style:italic; color:#555; margin-bottom:20px;">
+    We reply within 24 hours. Please place pre-orders at least 2 days in advance.
+  </p>
+  <form id="orderForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required placeholder="Your Name">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required placeholder="+960 123 4567">
+
+    <label for="bouquet">Choose Bouquet:</label>
+    <select id="bouquet">
+      <option value="None">None</option>
+      <option value="Small Bouquet">Small Bouquet</option>
+      <option value="Medium Bouquet">Medium Bouquet</option>
+      <option value="Large Bouquet">Large Bouquet</option>
+    </select>
+
+    <label for="giftbox">Gift Box:</label>
+    <select id="giftbox">
+      <option value="None">None</option>
+      <option value="Small Box">Small</option>
+      <option value="Medium Box">Medium</option>
+      <option value="Large Box">Large</option>
+    </select>
+
+    <label for="sweets">Select Sweets:</label>
+    <textarea id="sweets" placeholder="Write your choices: Cheesecake, Donuts, Cookies, Churros..." rows="3"></textarea>
+
+    <label for="notes">Special Notes:</label>
+    <textarea id="notes" placeholder="Any special instructions?" rows="3"></textarea>
+
+    <button type="submit" class="btn">Submit Order</button>
+  </form>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Treatelle.mv. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById('orderForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const bouquet = document.getElementById('bouquet').value;
+      const giftbox = document.getElementById('giftbox').value;
+      const sweets = document.getElementById('sweets').value;
+      const notes = document.getElementById('notes').value;
+
+      const message = `Hello! I want to place an order:%0AName: ${name}%0APhone: ${phone}%0ABouquet: ${bouquet}%0AGift Box: ${giftbox}%0ASweets: ${sweets}%0ANotes: ${notes}`;
+
+      // For Email (edit your email below)
+      const email = "your-email@example.com";
+      const mailtoLink = `mailto:${email}?subject=New Order&body=${message}`;
+      window.open(mailtoLink, '_blank');
+    });
+  </script>
+
+</body>
+</html>
